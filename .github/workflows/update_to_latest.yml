@@ -14,7 +14,7 @@ jobs:
     - name: Curl RangeMessage.xml.
       uses: wei/curl@v1.1.1
       with:
-        args: https://www.isbn-international.org/export_rangemessage.xml
+        args: https://www.isbn-international.org/export_rangemessage.xml -o RangeMessage.xml
     - name: Send PR.
       uses: peter-evans/create-pull-request@v3
       with:
