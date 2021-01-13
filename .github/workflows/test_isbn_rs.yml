@@ -12,7 +12,7 @@ jobs:
     - name: checkout range messages
       uses: actions/checkout@v2
     - name: remove old range messages
-      run: rm -r isbn-rs/range-messages
+      run: ls && rm -r isbn-rs/range-messages
     - name: copy new range messages
       run: mv range-messages isbn-rs/range-messages
     - name: Install toolchain
