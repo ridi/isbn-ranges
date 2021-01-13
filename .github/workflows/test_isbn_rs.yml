@@ -17,7 +17,7 @@ jobs:
     - name: remove old range messages
       run: ls && rm -r isbn-rs/isbn-ranges
     - name: copy new range messages
-      run: mv range-messages isbn-rs/isbn-ranges
+      run: mv isbn-ranges isbn-rs/isbn-ranges
     - name: Install toolchain
       uses: actions-rs/toolchain@v1
       with:
