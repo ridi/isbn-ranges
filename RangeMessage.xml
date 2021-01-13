@@ -17,8 +17,8 @@
 ]>
 <ISBNRangeMessage>
   <MessageSource>International ISBN Agency</MessageSource>
-  <MessageSerialNumber>c16f7665-c79a-458d-98a7-842b00d705f9</MessageSerialNumber>
-  <MessageDate>Fri, 18 Dec 2020 16:47:44 GMT</MessageDate>
+  <MessageSerialNumber>0c5e7d67-d086-48c1-80f9-55319988b0c0</MessageSerialNumber>
+  <MessageDate>Tue, 12 Jan 2021 10:43:54 GMT</MessageDate>
   <EAN.UCCPrefixes>
     <EAN.UCC>
       <Prefix>978</Prefix>
@@ -7072,6 +7072,20 @@
         </Rule>
         <Rule>
           <Range>9500000-9999999</Range>
+          <Length>3</Length>
+        </Rule>
+      </Rules>
+    </Group>
+    <Group>
+      <Prefix>978-99987</Prefix>
+      <Agency>Luxembourg</Agency>
+      <Rules>
+        <Rule>
+          <Range>0000000-8499999</Range>
+          <Length>0</Length>
+        </Rule>
+        <Rule>
+          <Range>8500000-9999999</Range>
           <Length>3</Length>
         </Rule>
       </Rules>
