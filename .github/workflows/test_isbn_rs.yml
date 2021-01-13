@@ -9,8 +9,12 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: "philippeitis/isbn-rs"
+    - name: cd
+      run: cd ..
     - name: checkout range messages
       uses: actions/checkout@v2
+    - name: cd
+      run: cd ..
     - name: remove old range messages
       run: ls && rm -r isbn-rs/range-messages
     - name: copy new range messages
