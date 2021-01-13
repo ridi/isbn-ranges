@@ -1,0 +1,22 @@
+name: Test RangeMessage.xml is well-formed.
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout isbn-rs
+      uses: actions/checkout@v2
+      with:
+        repository: "philippeitis/isbn-rs"
+    - name: cd
+      run: cd isbn-ranges
+    - name: checkout range messages
+      uses: actions/checkout@v2
+    - name: cd ..
+      run: cd ..
+    - name: test
+      uses: actions-rs/toolchain@v1
+      with:
+        override: true
+      run: cargo test
