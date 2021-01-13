@@ -1,5 +1,5 @@
 name: Test RangeMessage.xml is well-formed.
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   test:
