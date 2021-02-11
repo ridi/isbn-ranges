@@ -1,0 +1,27 @@
+name: Test RangeMessage.xml is well-formed.
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout isbn-rs
+      uses: actions/checkout@v2
+      with:
+        repository: "philippeitis/isbn-rs"
+        path: "isbn-rs"  
+    - name: checkout range messages
+      uses: actions/checkout@v2
+      with:
+        path: "isbn-ranges"
+    - name: remove old range messages
+      run: ls && rm -r isbn-rs/isbn-ranges
+    - name: copy new range messages
+      run: mv isbn-ranges isbn-rs/isbn-ranges
+    - name: Install toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        override: true
+    - name: test  
+      run: cd isbn-rs && cargo test
